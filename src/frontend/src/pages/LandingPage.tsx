@@ -414,29 +414,6 @@ function HeroSection() {
             </button>
           </div>
         </motion.div>
-
-        {/* Stats */}
-        <motion.div
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          transition={{ duration: 1, delay: 0.8 }}
-          className="mt-20 grid grid-cols-3 gap-8 max-w-lg mx-auto"
-        >
-          {[
-            { val: "500+", label: "Projects Completed" },
-            { val: "8+", label: "Years Experience" },
-            { val: "100%", label: "Client Satisfaction" },
-          ].map((stat) => (
-            <div key={stat.val} className="text-center">
-              <p className="font-heading font-black text-2xl md:text-3xl gradient-text">
-                {stat.val}
-              </p>
-              <p className="text-muted-foreground text-xs mt-1 tracking-wide">
-                {stat.label}
-              </p>
-            </div>
-          ))}
-        </motion.div>
       </div>
 
       {/* Scroll indicator */}
@@ -577,15 +554,6 @@ function AboutSection() {
                 </div>
               </div>
             </div>
-            {/* Floating badge */}
-            <div className="absolute -bottom-6 -right-6 card-sheen rounded-2xl p-5 shadow-xl">
-              <p className="font-heading font-black text-3xl gradient-text">
-                500+
-              </p>
-              <p className="text-muted-foreground text-xs tracking-widest">
-                FILMS MADE
-              </p>
-            </div>
           </motion.div>
 
           {/* Text side */}
@@ -598,59 +566,36 @@ function AboutSection() {
             <p className="text-xs tracking-[0.4em] text-primary font-semibold uppercase mb-4">
               Our Approach
             </p>
-            <h2 className="font-heading font-black text-3xl md:text-4xl lg:text-5xl uppercase tracking-tight text-foreground mb-6 leading-none">
-              CRAFTING
-              <br />
-              <span className="gradient-text">VISUAL POETRY</span>
+            <h2 className="font-heading font-black text-4xl md:text-5xl text-foreground mb-6 leading-tight">
+              Visual Stories That Last Forever
             </h2>
-            <p className="text-muted-foreground leading-relaxed mb-6">
-              At Metric Visuals, we believe every story deserves to be told
-              beautifully. Our team of seasoned cinematographers and editors
-              bring unparalleled creativity and technical mastery to every
-              project — from intimate weddings to global brand campaigns.
+            <p className="text-muted-foreground text-lg leading-relaxed mb-6">
+              At Metric Visuals, we believe every moment deserves to be captured
+              with intention and artistry. Founded in 2016, we've spent nearly a
+              decade perfecting the craft of cinematic storytelling — from
+              intimate weddings to large-scale corporate productions.
             </p>
             <p className="text-muted-foreground leading-relaxed mb-8">
-              We don't just film — we create immersive visual experiences that
-              move audiences, evoke emotion, and stand the test of time. Our
-              cinematic approach blends artistry with precision to deliver work
-              that exceeds expectations.
+              We combine industry-leading equipment with a deeply personal
+              approach, ensuring your film reflects not just what happened, but
+              how it felt. Every project is treated as a unique creative
+              collaboration.
             </p>
-            <div className="grid grid-cols-2 gap-6 mb-8">
+            <div className="flex flex-wrap gap-3">
               {[
-                {
-                  label: "Pre-Production Planning",
-                  desc: "Meticulous preparation",
-                },
-                { label: "Cinematic Filming", desc: "Premium equipment" },
-                {
-                  label: "Expert Post-Production",
-                  desc: "Professional grading",
-                },
-                { label: "Fast Delivery", desc: "On time, every time" },
-              ].map((item) => (
-                <div key={item.label} className="flex items-start gap-3">
-                  <div className="w-5 h-5 rounded-full gradient-bg flex items-center justify-center flex-shrink-0 mt-0.5">
-                    <Check size={10} className="text-white" />
-                  </div>
-                  <div>
-                    <p className="text-foreground text-sm font-semibold">
-                      {item.label}
-                    </p>
-                    <p className="text-muted-foreground text-xs">{item.desc}</p>
-                  </div>
-                </div>
+                "Cinematic Grade",
+                "4K Production",
+                "Drone Aerials",
+                "Same-Day Edits",
+              ].map((tag) => (
+                <span
+                  key={tag}
+                  className="px-4 py-2 rounded-full border border-primary/30 text-primary text-sm font-medium"
+                >
+                  {tag}
+                </span>
               ))}
             </div>
-            <GradientButton
-              onClick={() =>
-                document
-                  .querySelector("#booking")
-                  ?.scrollIntoView({ behavior: "smooth" })
-              }
-              data-ocid="about.primary_button"
-            >
-              START YOUR PROJECT
-            </GradientButton>
           </motion.div>
         </div>
       </div>
