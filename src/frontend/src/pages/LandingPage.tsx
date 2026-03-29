@@ -1013,11 +1013,11 @@ function EnquiryFormSection() {
               </h3>
               {[
                 { icon: Mail, label: "Email", val: "hello@metricvisuals.com" },
-                { icon: Phone, label: "Phone", val: "+44 20 7000 0000" },
+                { icon: Phone, label: "Phone", val: "+91 98461 80845" },
                 {
                   icon: MapPin,
                   label: "Studio",
-                  val: "London, United Kingdom",
+                  val: "Trivandrum, Kerala",
                 },
               ].map((c) => (
                 <div key={c.label} className="flex items-center gap-4">
@@ -1061,6 +1061,14 @@ function Footer() {
               Premium videography studio crafting cinematic stories that elevate
               brands and preserve memories.
             </p>
+            <div className="mt-4 space-y-1">
+              <p className="text-muted-foreground text-sm">
+                📞 +91 98461 80845
+              </p>
+              <p className="text-muted-foreground text-sm">
+                📍 Trivandrum, Kerala
+              </p>
+            </div>
             <div className="flex gap-3 mt-6">
               {[
                 { Icon: Instagram, href: "#", name: "instagram" },
